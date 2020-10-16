@@ -1,0 +1,18 @@
+from flask import Flask, render_template, request
+from Chatbot.simple_chatbot import SimpleChatBot
+
+app = Flask(__name__)
+
+bot = SimpleChatBot("Chad", user="root", password="root", database="testter")
+
+@app.route("/")
+def home():
+    return render_template("chat.html")
+
+@app.route("/get")
+def get_bot_response():
+    userText = request.args.get('msg')
+    return str(bot.get_response(userText))
+
+if __name__ == "__main__":
+    app.run()

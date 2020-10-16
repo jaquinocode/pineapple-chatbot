@@ -1,0 +1,182 @@
+ <div className="App">
+        <nav id="menu">
+          <ul classNameA="links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="generic.html">Generic</a>
+            </li>
+            <li>
+              <a href="elements.html">Elements</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section id="banner" data-video="images/banner">
+          <div className="inner">
+            <header>
+              <h1>π napple</h1>
+              <p>
+                This is the chatbot
+                <br />
+                Pineapple Chatbot
+              </p>
+            </header>
+            <button
+              className="button big alt scrolly"
+              onClick={this.handleClick}
+            >
+              Use πnapple
+            </button>
+            <p>{this.state.username}</p>
+          </div>
+        </section>
+
+        <div className="chatbox chatbox--tray chatbox--empty">
+          <div className="chatbox__title">
+            <h5>
+              <a href="#">Customer Service</a>
+            </h5>
+            <button className="chatbox__title__tray">
+              <span />
+            </button>
+            <button className="chatbox__title__close">
+              <span>
+                <svg viewBox="0 0 12 12" width="12px" height="12px">
+                  <line
+                    stroke="#FFFFFF"
+                    x1="11.75"
+                    y1="0.25"
+                    x2="0.25"
+                    y2="11.75"
+                  />
+                  <line
+                    stroke="#FFFFFF"
+                    x1="11.75"
+                    y1="11.75"
+                    x2="0.25"
+                    y2="0.25"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div className="chatbox__body">
+            <div className="chatbox__body__message chatbox__body__message--left">
+              <img
+                src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg"
+                alt="Picture"
+              />
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div className="chatbox__body__message chatbox__body__message--right">
+              <img
+                src="https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg"
+                alt="Picture"
+              />
+              <p>
+                Nulla vel turpis vulputate, tincidunt lectus sed, porta arcu.
+              </p>
+            </div>
+            <div className="chatbox__body__message chatbox__body__message--left">
+              <img
+                src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg"
+                alt="Picture"
+              />
+              <p>
+                Curabitur consequat nisl suscipit odio porta, ornare blandit
+                ante maximus.
+              </p>
+            </div>
+            <div className="chatbox__body__message chatbox__body__message--right">
+              <img
+                src="https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg"
+                alt="Picture"
+              />
+              <p>
+                Cras dui massa, placerat vel sapien sed, fringilla molestie
+                justo.
+              </p>
+            </div>
+            <div className="chatbox__body__message chatbox__body__message--right">
+              <img
+                src="https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg"
+                alt="Picture"
+              />
+              <p>
+                Praesent a gravida urna. Mauris eleifend, tellus ac fringilla
+                imperdiet, odio dolor sodales libero, vel mattis elit mauris id
+                erat. Phasellus leo nisi, convallis in euismod at, consectetur
+                commodo urna.
+              </p>
+            </div>
+          </div>
+
+          <form className="chatbox__credentials">
+            <div className="form-group">
+              <label for="inputName">Name:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="inputName"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label for="inputEmail">Email:</label>
+              <input
+                type="email"
+                className="form-control"
+                id="inputEmail"
+                required
+              />
+            </div>
+            <button type="submit" className="btn btn-success btn-block">
+              Enter Chat
+            </button>
+          </form>
+          <textarea
+            className="chatbox__message"
+            placeholder="Write something interesting"
+          />
+        </div>
+        <footer id="footer">
+          <div className="copyright">
+            <ul className="icons">
+              <li>
+                <a href="#" className="icon fa-twitter">
+                  <span className="label">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="icon fa-facebook">
+                  <span className="label">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="icon fa-instagram">
+                  <span className="label">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="icon fa-snapchat">
+                  <span className="label">Snapchat</span>
+                </a>
+              </li>
+            </ul>
+            &copy; Untitled. Design:{" "}
+            <a href="https://templated.co">TEMPLATED</a>. Images:{" "}
+            <a href="https://unsplash.com">Coverr</a>. Video:{" "}
+            <a href="https://coverr.co">Coverr</a>.
+          </div>
+        </footer>
+
+        {/*
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+      */}
+      </div>

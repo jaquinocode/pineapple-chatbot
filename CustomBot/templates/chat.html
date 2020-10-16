@@ -1,0 +1,65 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel = "stylesheet" href = "Pineapple.css">
+
+</head>
+
+
+    <div class = "split left">
+        <div class = "centered">
+            <img class = "logo" src = "https://upload.wikimedia.org/wikipedia/en/f/f7/CSU%2C_Los_Angeles_seal.svg" alt ="Cal state la logo">
+            <h2>Pienapple ChatBot</h2>
+        </div>
+    </div>
+
+    <div class = "split right">
+        <div class = "centered">
+            <img class = "derp" src = "https://techcrunch.com/wp-content/uploads/2016/05/robot-customer-service.png?w=1390&crop=1" alt ="Customer Service Robot">
+
+ <body>
+    <h1>Talk to me</h1>
+    <div>
+      <div id="chatbox">
+        <p class="botText"><span>Hi! I'm Chatterbot.</span></p>
+      </div>
+      <div id="userInput">
+        <input id="textInput" type="text" name="msg" placeholder="Message">
+        <input id="buttonInput" type="submit" value="Send">
+      </div>
+      <script>
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + '</span><</p>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          $.get("/get", { msg: rawText }).done(function(data) {
+            if (data.includes(".edu")) {
+              var botHtml = '<p class="botText"><span><a href="' + data +'" target="_blank">' + data + '</a></span></p>';
+            } else {
+              var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+            }
+
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          });
+        }
+        $("#textInput").keypress(function(e) {
+            if(e.which == 13) {
+                getBotResponse();
+            }
+        });
+        $("#buttonInput").click(function() {
+          getBotResponse();
+        })
+      </script>
+    </div>
+  </body>
+        </div>
+
+    </div>
+</html>
